@@ -1,0 +1,6 @@
+# HelloWorld.srv
+
+---
+# Response
+bool success
+string message
