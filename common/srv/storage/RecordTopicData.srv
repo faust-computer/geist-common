@@ -1,0 +1,34 @@
+# RecordTopicData.srv
+
+# topic name to record e.g. "/camera/rgb/image_raw"
+string topic
+
+# msg type name to record e.g. "sensor_msgs/Image"
+string topic_msg_type
+
+# Duration for which it should be recorded (in seconds)
+float64 duration
+
+# Target path to save the recorded topic data
+# An empty string will default to a predefined path
+string target_path
+
+# Number of times the service should record
+# 0 if it should go on forever
+# default: 0 (forever)
+uint16 max_record_count
+
+# Enum for the data type, can be one of:
+# 0: "rosbag"
+# 1: "mcap"
+# 2: "parquet"
+# default: 0 (rosbag)
+uint8 storage_medium
+
+---
+# Response
+
+# Success flag to indicate if the operation was successful
+bool success
+# message to indicate the reason for failure
+string message

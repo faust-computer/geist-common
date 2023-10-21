@@ -1,0 +1,25 @@
+# CreateProof.srv
+
+# file path name to data to make proof of
+string path
+
+# Enum for the data type, can be one of:
+# 0: sha256
+# 1: ECDSA
+# 2: risc zero (not implemented)
+# 3: zk-snark (not implemented)
+#
+# default: 0
+uint8 proof_type
+
+---
+# Response part
+
+# Success flag to indicate if the operation was successful
+bool success
+
+# proof of the data
+string proof
+
+# message to indicate the reason for failure, empty if sucess is true
+string error

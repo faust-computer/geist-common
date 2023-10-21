@@ -1,0 +1,6 @@
+# WhoAmI.srv
+
+---
+# Response
+bool success
+string version

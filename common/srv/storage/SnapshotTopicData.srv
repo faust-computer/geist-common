@@ -1,0 +1,13 @@
+# SnapshotTopicData.srv
+
+# Target path where the snapshot should be saved.
+# An empty string uses the default path.
+string file_path
+
+# Topic to be snapshotted
+# assuming this is a camera img topic
+string topic_name
+
+---
+# Response
+bool success

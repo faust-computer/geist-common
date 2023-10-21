@@ -1,0 +1,36 @@
+# ContractCall.srv
+
+# timestamp of the transaction, etc
+std_msgs/Header header
+
+# ABI path
+string path
+
+# Contract address
+string address
+
+# Method name
+string method
+
+# Chain ID
+int32 chain_id
+
+# Input Parameters (array of key-value pairs)
+Inputs[] inputs
+
+# Operation type (GET or SET)
+ContractOpMode op
+
+# Output parameter type, if exists
+string output
+---
+# Response
+
+# Success flag
+bool success
+
+# Transaction hash
+string tx_hash
+
+# Error message
+string error

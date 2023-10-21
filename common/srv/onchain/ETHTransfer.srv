@@ -1,0 +1,38 @@
+# ETHTransfer.srv
+
+# timestamp of the transaction, etc
+std_msgs/Header header
+
+# the author of the transaction
+string author
+
+# the recipient of the transaction
+string to
+
+# the amount of the transaction
+int64 amount
+
+# the gas of the transaction
+int64 gas
+
+# Chain ID of the transaction
+int32 chain_id
+
+# the gas price of the transaction
+int64 gas_price
+
+# the value of the transaction
+int64 value
+
+# the data of the transaction
+string data
+
+---
+# whether the tx was received or not (not if it was successful)
+bool success
+
+# the hash of the transaction
+string tx_hash
+
+# the error of the transaction
+string error
