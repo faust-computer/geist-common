@@ -1,9 +1,9 @@
 {
-    "name": "@geist/common",
+    "name": "geist_common",
     "author": "Faust Computer",
     "version": "0.1.2",
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "files": [
         "/dist"
     ],
