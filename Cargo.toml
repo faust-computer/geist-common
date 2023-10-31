@@ -9,9 +9,12 @@ homepage = "https://faust.computer"
 repository = "https://github.com/faust-computer/geist_common"
 
 [dependencies]
-roslibrust = { git = "https://github.com/Carter12s/roslibrust", branch = "master" }
-roslibrust_codegen = { git = "https://github.com/Carter12s/roslibrust", branch = "master" }
-roslibrust_codegen_macro = { git = "https://github.com/Carter12s/roslibrust", branch = "master" }
+roslibrust = "0.8.0"
+roslibrust_codegen = "0.8.0"
+roslibrust_codegen_macro = "0.8.0"
+# roslibrust = { git = "https://github.com/Carter12s/roslibrust", branch = "master" }
+# roslibrust_codegen = { git = "https://github.com/Carter12s/roslibrust", branch = "master" }
+# roslibrust_codegen_macro = { git = "https://github.com/Carter12s/roslibrust", branch = "master" }
 serde = "1.0.189"
 serde_json = "1.0.107"
 smart-default = "0.7.1"
