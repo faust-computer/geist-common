@@ -1,0 +1,15 @@
+{
+    "name": "geist_common",
+    "author": "Faust Computer",
+    "version": "0.1.2",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "/dist"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "typescript": "^4.9.5"
+    },
+    "description": "Geist common messages for running a Geist application"
+}

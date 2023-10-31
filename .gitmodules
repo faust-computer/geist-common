@@ -1,6 +1,6 @@
-[submodule "assets/vision_msgs"]
-	path = assets/vision_msgs
-	url = git@github.com:ros-perception/vision_msgs.git
 [submodule "assets/common_interfaces"]
 	path = assets/common_interfaces
 	url = git@github.com:ros2/common_interfaces.git
+[submodule "assets/vision_msgs"]
+	path = assets/vision_msgs
+	url = git@github.com:ros-perception/vision_msgs
