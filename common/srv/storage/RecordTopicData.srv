@@ -3,9 +3,6 @@
 # topic name to record e.g. "/camera/rgb/image_raw"
 string topic
 
-# msg type name to record e.g. "sensor_msgs/Image"
-string topic_msg_type
-
 # Duration for which it should be recorded (in seconds)
 float64 duration
 

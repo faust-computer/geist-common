@@ -1,13 +1,20 @@
 # SnapshotTopicData.srv
 
+# topic name to record e.g. "/camera/rgb/image_raw"
+string topic
+
+# Target path to save the recorded topic data
+# An empty string will default to a predefined path
+string target_path
+
 # Target path where the snapshot should be saved.
 # An empty string uses the default path.
 string file_path
 
-# Topic to be snapshotted
-# assuming this is a camera img topic
-string topic_name
-
 ---
 # Response
+
+# Success flag to indicate if the operation was successful
 bool success
+# message to indicate the reason for failure
+string message
