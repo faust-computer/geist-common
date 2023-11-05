@@ -3,13 +3,17 @@
 # topic name to record e.g. "/camera/rgb/image_raw"
 string topic
 
+# Duration for which it should be recorded (in seconds)
+float64 duration
+
 # Target path to save the recorded topic data
 # An empty string will default to a predefined path
 string target_path
 
-# Target path where the snapshot should be saved.
-# An empty string uses the default path.
-string file_path
+# Number of times the service should record
+# 0 if it should go on forever
+# default: 0 (forever)
+uint16 max_record_count
 
 ---
 # Response
