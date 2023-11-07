@@ -14,5 +14,4 @@ This *only* generates ts types and enums. This means the output does not include
 
 ## Build & Publish
 1. `npm run build`
-2. Adjust version in `package.json` accordingly
-2. `npm publish`
+2. `npm run release`
