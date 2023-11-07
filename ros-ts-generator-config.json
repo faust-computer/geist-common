@@ -1,0 +1,16 @@
+{
+    "output": "./generated/msgs.ts",
+    "rosVersion": 2,
+    "inputs": [
+        {
+            "path": "/opt/ros/humble/share/std_msgs"
+        },
+        {
+            "path": "./common/msg"
+        },
+        {
+            "path": "./common/srv"
+        }
+    ],
+    "typePrefix": "I"
+}
