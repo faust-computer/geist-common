@@ -8,7 +8,7 @@
         "/dist"
     ],
     "license": "MIT",
-    "dependencies": {
+    "devDependencies": {
         "typescript": "^4.9.5"
     },
     "description": "Geist common messages for running a Geist application"
