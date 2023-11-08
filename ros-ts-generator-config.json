@@ -4,13 +4,15 @@
     "input": [
         {
             "namespace": "std_msgs",
-            "path": "/opt/ros/humble/share/std_msgs"
+            "path": "./assets/common_interfaces/std_msgs/msg"
         },
         {
-            "path": "./assets/common_interfaces"
+            "namespace": "geometry_msgs",
+            "path": "./assets/common_interfaces/geometry_msgs/msg"
         },
         {
-            "path": "./assets/vision_msgs"
+            "namespace": "vision_msgs",
+            "path": "./assets/vision_msgs/vision_msgs/msg"
         },
         {
             "path": "./common/msg"
