@@ -1,9 +1,16 @@
 {
     "output": "./src/generated/msgs.ts",
     "rosVersion": 2,
-    "inputs": [
+    "input": [
         {
+            "namespace": "std_msgs",
             "path": "/opt/ros/humble/share/std_msgs"
+        },
+        {
+            "path": "./assets/common_interfaces"
+        },
+        {
+            "path": "./assets/vision_msgs"
         },
         {
             "path": "./common/msg"

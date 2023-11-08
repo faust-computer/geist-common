@@ -3,6 +3,7 @@ Note: The order of these instructions matter. Please go about this from top to b
 ## Setup Your Enviroment
 1. `nvm use`
 2. `npm install`
+3. `npm install -g typescript`
 
 ## Generate Messages
 We use https://github.com/Greenroom-Robotics/ros-typescript-generator under the hood to generate the ts interfaces for the corresponding ROS2 and Geist msgs.
