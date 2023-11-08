@@ -6,7 +6,7 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "tsc",
-        "generate": "npx ros-typescript-generator",
+        "generate": "git submodule update --init --recursive && npx ros-typescript-generator",
         "release": "npm version patch --force && npm publish --access public"
     },
     "files": [
