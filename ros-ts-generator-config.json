@@ -1,0 +1,25 @@
+{
+    "output": "./src/generated/msgs.ts",
+    "rosVersion": 2,
+    "input": [
+        {
+            "namespace": "std_msgs",
+            "path": "./assets/common_interfaces/std_msgs/msg"
+        },
+        {
+            "namespace": "geometry_msgs",
+            "path": "./assets/common_interfaces/geometry_msgs/msg"
+        },
+        {
+            "namespace": "vision_msgs",
+            "path": "./assets/vision_msgs/vision_msgs/msg"
+        },
+        {
+            "path": "./common/msg"
+        },
+        {
+            "path": "./common/srv"
+        }
+    ],
+    "typePrefix": "I"
+}
