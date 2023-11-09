@@ -5,4 +5,3 @@ find_and_generate_ros_messages!(
     "assets/common_interfaces",
     "assets/vision_msgs"
 );
-
