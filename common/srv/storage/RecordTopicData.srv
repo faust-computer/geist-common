@@ -27,5 +27,9 @@ uint8 storage_medium
 
 # Success flag to indicate if the operation was successful
 bool success
+
+# Path where the data was saved
+string path
+
 # message to indicate the reason for failure
 string message
