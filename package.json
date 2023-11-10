@@ -2,12 +2,14 @@
     "name": "geist_common",
     "author": "Faust Computer",
     "version": "0.1.4",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "dist/msgs.js",
+    "types": "dist/msgs.d.ts",
     "scripts": {
         "build": "tsc",
         "generate": "git submodule update --init --recursive && npx ros-typescript-generator",
-        "release": "npm version patch --force && npm publish --access public"
+        "release:patch": "npm version patch --force && npm publish --access public",
+        "release:minor": "npm version minor --force && npm publish --access public",
+        "release:major": "npm version major --force && npm publish --access public"
     },
     "files": [
         "/dist"

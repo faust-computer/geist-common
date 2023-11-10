@@ -15,4 +15,4 @@ This *only* generates ts types and enums. This means the output does not include
 
 ## Build & Publish
 1. `npm run build`
-2. `npm run release`
+2. `npm run release:patch` or `npm run release:minor` or `npm run release:major`

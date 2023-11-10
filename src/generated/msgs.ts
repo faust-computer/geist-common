@@ -379,6 +379,7 @@ export interface IUndefinedRecordTopicDataRequest {
 
 export interface IUndefinedRecordTopicDataResponse {
   success: boolean;
+  path: string;
   message: string;
 }
 
@@ -391,6 +392,7 @@ export interface IUndefinedSnapshotTopicDataRequest {
 
 export interface IUndefinedSnapshotTopicDataResponse {
   success: boolean;
+  path: string;
   message: string;
 }
 
