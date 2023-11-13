@@ -157,6 +157,120 @@ export interface IGeometryMsgsWrenchStamped {
   wrench: IGeometryMsgsWrench;
 }
 
+export interface IMsgsContractOpMode {
+  mode: number;
+}
+
+export enum IMsgsContractOpModeConst {
+  GET = 0,
+  SET = 1,
+}
+
+export interface IMsgsDacMachineData {
+  header: IStdMsgsHeader;
+  co2_captured: number;
+  total_kwh_used: number;
+}
+
+export interface IMsgsGpsData {
+  header: IStdMsgsHeader;
+  latitude: number;
+  longitude: number;
+  altitude: number;
+}
+
+export interface IMsgsInputs {
+  key: string;
+  value: string;
+}
+
+export interface IMsgsTime {
+  header: IStdMsgsHeader;
+  epoch_time: string;
+  utc_time: string;
+}
+
+export interface IServiceMsgsContractCallRequest {
+  path: string;
+  address: string;
+  method: string;
+  chain_id: number;
+  inputs: IMsgsInputs[];
+  op: IMsgsContractOpMode;
+  output: string;
+}
+
+export interface IServiceMsgsContractCallResponse {
+  success: boolean;
+  tx_hash: string;
+  error: string;
+}
+
+export interface IServiceMsgsCreateProofRequest {
+  path: string;
+  proof_type: number;
+}
+
+export interface IServiceMsgsCreateProofResponse {
+  success: boolean;
+  proof: string;
+  error: string;
+}
+
+export interface IServiceMsgsEthTransferRequest {
+  author: string;
+  to: string;
+  amount: number;
+  gas: number;
+  chain_id: number;
+  gas_price: number;
+  value: number;
+  data: string;
+}
+
+export interface IServiceMsgsEthTransferResponse {
+  success: boolean;
+  tx_hash: string;
+  error: string;
+}
+
+export interface IServiceMsgsHelloWorldResponse {
+  success: boolean;
+  message: string;
+}
+
+export interface IServiceMsgsRecordTopicDataRequest {
+  topic: string;
+  duration: number;
+  target_path: string;
+  max_record_count: number;
+  storage_medium: number;
+}
+
+export interface IServiceMsgsRecordTopicDataResponse {
+  success: boolean;
+  path: string;
+  message: string;
+}
+
+export interface IServiceMsgsSnapshotTopicDataRequest {
+  topic: string;
+  duration: number;
+  target_path: string;
+  max_record_count: number;
+}
+
+export interface IServiceMsgsSnapshotTopicDataResponse {
+  success: boolean;
+  path: string;
+  message: string;
+}
+
+export interface IServiceMsgsWhoAmIResponse {
+  success: boolean;
+  version: string;
+}
+
 export interface IStdMsgsBool {
   data: boolean;
 }
@@ -289,122 +403,6 @@ export interface IStdMsgsUInt8 {
 export interface IStdMsgsUInt8MultiArray {
   layout: IStdMsgsMultiArrayLayout;
   data: number[];
-}
-
-export interface IUndefinedContractCallRequest {
-  header: IStdMsgsHeader;
-  path: string;
-  address: string;
-  method: string;
-  chain_id: number;
-  inputs: IUndefinedInputs[];
-  op: IUndefinedContractOpMode;
-  output: string;
-}
-
-export interface IUndefinedContractCallResponse {
-  success: boolean;
-  tx_hash: string;
-  error: string;
-}
-
-export interface IUndefinedContractOpMode {
-  mode: number;
-}
-
-export enum IUndefinedContractOpModeConst {
-  GET = 0,
-  SET = 1,
-}
-
-export interface IUndefinedCreateProofRequest {
-  path: string;
-  proof_type: number;
-}
-
-export interface IUndefinedCreateProofResponse {
-  success: boolean;
-  proof: string;
-  error: string;
-}
-
-export interface IUndefinedDacMachineData {
-  header: IStdMsgsHeader;
-  co2_captured: number;
-  total_kwh_used: number;
-}
-
-export interface IUndefinedEthTransferRequest {
-  header: IStdMsgsHeader;
-  author: string;
-  to: string;
-  amount: number;
-  gas: number;
-  chain_id: number;
-  gas_price: number;
-  value: number;
-  data: string;
-}
-
-export interface IUndefinedEthTransferResponse {
-  success: boolean;
-  tx_hash: string;
-  error: string;
-}
-
-export interface IUndefinedGpsData {
-  header: IStdMsgsHeader;
-  latitude: number;
-  longitude: number;
-  altitude: number;
-}
-
-export interface IUndefinedHelloWorldResponse {
-  success: boolean;
-  message: string;
-}
-
-export interface IUndefinedInputs {
-  key: string;
-  value: string;
-}
-
-export interface IUndefinedRecordTopicDataRequest {
-  topic: string;
-  duration: number;
-  target_path: string;
-  max_record_count: number;
-  storage_medium: number;
-}
-
-export interface IUndefinedRecordTopicDataResponse {
-  success: boolean;
-  path: string;
-  message: string;
-}
-
-export interface IUndefinedSnapshotTopicDataRequest {
-  topic: string;
-  duration: number;
-  target_path: string;
-  max_record_count: number;
-}
-
-export interface IUndefinedSnapshotTopicDataResponse {
-  success: boolean;
-  path: string;
-  message: string;
-}
-
-export interface IUndefinedTime {
-  header: IStdMsgsHeader;
-  epoch_time: string;
-  utc_time: string;
-}
-
-export interface IUndefinedWhoAmIResponse {
-  success: boolean;
-  version: string;
 }
 
 export interface IVisionMsgsBoundingBox2D {
