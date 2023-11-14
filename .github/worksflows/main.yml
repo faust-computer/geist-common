@@ -1,0 +1,49 @@
+name: main
+
+on:
+  push:
+    branches: [main]  
+  pull_request:
+    branches: [main]
+
+jobs:
+  rust_build_test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: stable
+        override: true
+
+    - name: Build
+      run: cd rust && cargo build
+
+    - name: Run tests
+      run: cd rust && cargo test --verbose
+  
+  # ts_build_test:
+  
+  #     runs-on: ubuntu-latest
+  
+  #     steps:
+  #     - uses: actions/checkout@v2
+  
+  #     - name: Setup Node.js
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: '14.17.0'
+  
+  #     - name: Install dependencies
+  #       run: cd ts && npm install
+  
+  #     - name: Build
+  #       run: cd ts && npm run build
+  
+  #     - name: Run tests
+  #       run: cd ts && npm run test
