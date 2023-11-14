@@ -1,14 +1,21 @@
 {
     "name": "geist_common",
     "author": "Faust Computer",
-    "version": "0.1.2",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "version": "0.1.6",
+    "main": "dist/msgs.js",
+    "types": "dist/msgs.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "generate": "git submodule update --init --recursive && npx ros-typescript-generator",
+        "release:patch": "npm version patch --force && npm publish --access public",
+        "release:minor": "npm version minor --force && npm publish --access public",
+        "release:major": "npm version major --force && npm publish --access public"
+    },
     "files": [
         "/dist"
     ],
     "license": "MIT",
-    "dependencies": {
+    "devDependencies": {
         "typescript": "^4.9.5"
     },
     "description": "Geist common messages for running a Geist application"

@@ -1,8 +1,5 @@
 # ETHTransfer.srv
 
-# timestamp of the transaction, etc
-std_msgs/Header header
-
 # the author of the transaction
 string author
 

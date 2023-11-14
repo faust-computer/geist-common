@@ -1,8 +1,5 @@
 # ContractCall.srv
 
-# timestamp of the transaction, etc
-std_msgs/Header header
-
 # ABI path
 string path
 

@@ -1,1 +1,4 @@
 rust/target/*
+ts/dist/
+.vscode
+ts/node_modules/
