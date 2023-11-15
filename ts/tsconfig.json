@@ -6,6 +6,6 @@
       "outDir": "./dist"
     },
     "include": [
-      "src/generated/msgs.ts"
+      "./src/generated/msgs.ts"
     ]
   }

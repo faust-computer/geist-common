@@ -31,26 +31,27 @@ jobs:
       - name: Run tests
         run: cd rust && cargo test --verbose
     
-  # ts_build_test:
+  ts_build_test:
   
-  #     runs-on: ubuntu-latest
+      runs-on: ubuntu-latest
   
-  #     steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v3
-  #       with:
-  #         submodules: 'recursive'
-  #         fetch-depth: 0
-  # #     - name: Setup Node.js
-  #       uses: actions/setup-node@v1
-  #       with:
-  #         node-version: '14.17.0'
+      steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.17.0'
   
-  #     - name: Install dependencies
-  #       run: cd ts && npm install
+      - name: Install dependencies
+        run: cd ts && npm install
   
-  #     - name: Build
-  #       run: cd ts && npm run build
+      - name: Build
+        run: cd ts && npm run build
   
-  #     - name: Run tests
-  #       run: cd ts && npm run test
+      - name: Run tests
+        run: cd ts && npm run test
