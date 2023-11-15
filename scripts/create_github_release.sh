@@ -17,17 +17,23 @@ fi
 # Assign new tag name from the first argument
 new_tag_name=$1
 
-# Get the latest release tag
-latest_tag=$(git describe --tags --abbrev=0)
-
-# Get the commit hash associated with the latest release tag
-latest_commit_hash=$(git rev-list -n 1 $latest_tag)
-
-# Get the commit date in ISO 8601 format
-latest_commit_date=$(git show -s --format=%ci $latest_commit_hash)
-
-# Convert to a format suitable for the GitHub search API (optional)
-latest_commit_date=$(date -u -d "$latest_commit_date" +%Y-%m-%dT%H:%M:%SZ)
+# Check if there are any existing tags
+if git describe --tags --abbrev=0 > /dev/null 2>&1; then
+  # Get the latest release tag
+  latest_tag=$(git describe --tags --abbrev=0)
+  # Get the commit hash associated with the latest release tag
+  latest_commit_hash=$(git rev-list -n 1 $latest_tag)
+  # Get the commit date in ISO 8601 format
+  latest_commit_date=$(git show -s --format=%ci $latest_commit_hash)
+  # Convert to a format suitable for the GitHub search API
+  latest_commit_date=$(date -u -d "$latest_commit_date" +%Y-%m-%dT%H:%M:%SZ)
+else
+  echo "No existing tags found. Proceeding without previous tag information."
+  latest_tag="None"
+  latest_commit_hash="None"
+  # Use a very old date to include all PRs in the release notes
+  latest_commit_date="1970-01-01T00:00:00Z"
+fi
 
 # Generate the release notes
 release_notes=$(gh pr list --base main --search "is:closed merged:>=${latest_commit_date}" --json number,title,author | jq -r '.[] | "- [#\(.number)]: \(.title)"')
