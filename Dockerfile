@@ -13,7 +13,7 @@ ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 
 # Install ros-typescript-generator
 WORKDIR /app
-COPY ros-ts-generator-config.json ./
+COPY ts/ros-ts-generator-config.json ./
 COPY ./common ./common
 
 # Run ros-typescript-generator

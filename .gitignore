@@ -1,6 +1,4 @@
-/target
-/Cargo.lock
-dist/
+rust/target/*
+ts/dist/
 .vscode
-settings.json
-node_modules/
+ts/node_modules/
