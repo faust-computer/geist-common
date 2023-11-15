@@ -9,8 +9,5 @@ popd
 
 # this creates a typescript npm package
 pushd ts
-./scripts/publish.sh
+# ./scripts/publish.sh
 popd
-
-# release
-./scripts/create_github_release.sh
