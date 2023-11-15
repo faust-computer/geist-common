@@ -1,7 +1,7 @@
 {
     "name": "geist_common",
     "author": "Faust Computer",
-    "version": "0.1.11",
+    "version": "0.1.12",
     "main": "dist/msgs.js",
     "types": "dist/msgs.d.ts",
     "scripts": {

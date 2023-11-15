@@ -21,8 +21,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/geist/HelloWorld.srv"
   "srv/onchain/ETHTransfer.srv"
   "srv/onchain/ContractCall.srv"
-  "srv/storage/RecordTopicData.srv"
-  "srv/storage/SnapshotTopicData.srv"
+  "srv/system/storage/RecordTopicData.srv"
+  "srv/system/storage/SnapshotTopicData.srv"
   DEPENDENCIES builtin_interfaces std_msgs
  )
 
