@@ -289,7 +289,7 @@ dependencies = [
 
 [[package]]
 name = "geist_common"
-version = "0.1.7"
+version = "0.1.11"
 dependencies = [
  "roslibrust",
  "roslibrust_codegen",
