@@ -1,6 +1,6 @@
 [package]
 name = "geist_common"
-version = "0.1.12"
+version = "0.1.13"
 edition = "2021"
 description = "Geist common messages for running a Geist app"
 license = "MIT"
