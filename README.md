@@ -1,8 +1,8 @@
 # geist_common
 
 This repository named 'common' contains the following:
-- `assets`: contians common ROS2 `msgs`
-- `assets`: contains the ROS2 submodule package for all the standard messages and services
+- `assets/common_interfaces`: contians common ROS2 `msgs`
+- `assets/vision_msgs`: contains the ROS2 submodule package for all the vision messages and services
 - `common`: contains the ROS2 package for Geist and its messages and services
 - `rust`: contains for the rust crate that packages common
 - `ts` for the Typescript npm package that packages common
