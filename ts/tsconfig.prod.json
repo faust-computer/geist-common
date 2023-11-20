@@ -3,15 +3,9 @@
       "module": "commonjs",
       "target": "es2019",
       "declaration": true,
-      "outDir": "./dist",
-      "noEmit": false,
-      "types": ["jest", "node"]
+      "outDir": "./dist"
     },
     "include": [
       "./src/generated/msgs.ts"
     ],
-    "exclude": [
-      "node_modules",
-      "dist"
-    ]
   }
