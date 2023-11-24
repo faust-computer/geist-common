@@ -19,14 +19,26 @@ new_tag_name=$1
 
 # Check if there are any existing tags
 if git describe --tags --abbrev=0 > /dev/null 2>&1; then
+
   # Get the latest release tag
   latest_tag=$(git describe --tags --abbrev=0)
+
   # Get the commit hash associated with the latest release tag
   latest_commit_hash=$(git rev-list -n 1 $latest_tag)
+
   # Get the commit date in ISO 8601 format
   latest_commit_date=$(git show -s --format=%ci $latest_commit_hash)
-  # Convert to a format suitable for the GitHub search API
-  latest_commit_date=$(date -u -d "$latest_commit_date" +%Y-%m-%dT%H:%M:%SZ)
+
+  # Check OS for date command compatibility and convert the date
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS (BSD) - using 'cut' to remove the timezone part and then convert
+    latest_commit_date=$(echo $latest_commit_date | cut -d ' ' -f 1-2)
+    latest_commit_date=$(date -j -f "%Y-%m-%d %H:%M:%S" "$latest_commit_date" "+%Y-%m-%dT%H:%M:%SZ")
+  else
+    # Linux (GNU) - direct conversion
+    latest_commit_date=$(date -u -d "$latest_commit_date" "+%Y-%m-%dT%H:%M:%SZ")
+  fi
+
 else
   echo "No existing tags found. Proceeding without previous tag information."
   latest_tag="None"
