@@ -19,6 +19,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/attestation/CreateProof.srv"
   "srv/geist/WhoAmI.srv"
   "srv/geist/HelloWorld.srv"
+  "srv/network/farcaster/PublishCast.srv"
   "srv/onchain/ETHTransfer.srv"
   "srv/onchain/ContractCall.srv"
   "srv/system/storage/RecordTopicData.srv"
