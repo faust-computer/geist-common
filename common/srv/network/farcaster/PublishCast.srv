@@ -1,0 +1,13 @@
+# PublishCast.srv
+
+# publish cast
+string content
+
+---
+# Response
+
+# Success flag
+bool success
+
+# Error message
+string error
